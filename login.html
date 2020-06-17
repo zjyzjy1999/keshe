@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link type="text/css" href="css/nov1.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="box1">
+			<div class="span"><a href="" class="BT">UT直聘</a></div>
+			<div class="sapn2"><a href="" class="BT2">企业注册</a><a href="" class="BT3">管理员</a></div>
+			<!--<div class="sapn3"><a href="" class="BT2">管理员</a></div>-->
+		</div>
+		<div class="box2">
+			<div class="box2_1">
+				<div class="box2_1_1">海量优质大学生，在线约面</div>
+				<img src="img/banner.png" class="img1"/>
+			</div>
+			<div class="box2_2">
+				<div class="box2_2_1">
+					<div class="box2_2_1_1">
+						<button class="button" id="login">我要登录</button ><button class="button" id="up">我要注册</span>
+					</div>
+					<div style="display: none;" id="lg_up">
+						<form method="post" action="#">
+							<div class="box2_2_1_2">一键注册UT直聘</div>
+						    <table class="table" align="center">
+						    	<tr>
+						    		<td>用户名：</td>
+						    		<td><input type="text" name="name" class="ipute"></td>
+						    	</tr>
+						    	<tr>
+						    		<td>密码：</td>
+						    		<td><input type="password" name="pwd1" class="ipute"></td>
+						    	</tr>
+						    	<tr>
+						    		<td>确认密码：</td>
+						    		<td><input type="password" name="pwd2" class="ipute"></td>
+						    	</tr>
+						    	<tr>
+						    		<td>邮箱：</td>
+						    		<td><input type="text" name="email" class="ipute"></td>
+						    	</tr>
+						    	<tr>
+						    		<td>性别：</td>
+						    		<td>
+						    			<select name="sex" class="ipute1">
+						    				<option>男</option>
+						    				<option>女</option>
+						    			</select>
+						    		</td>
+						    	</tr>
+						    	
+						    </table>
+						    <button class="button1" type="submit">一键注册</button>
+						    <div style="text-align: center;padding-top: 10px;">
+						    	<input type="checkbox" name="aqxy" id="aqxy" /><label for="aqxy">同意UT直聘相关协议</label><br />
+						    	<label>还没账号&nbsp;<a href="#" class="clj_login">到处逛逛</a></label>
+						        
+						    </div>
+						    
+					    </form>
+					</div>
+					<div id="lg_in">
+						<form method="post" action="">
+							<div class="box2_2_1_2">一键登录UT直聘</div>
+						    <table class="table" align="center">
+						    	<tr>
+						    		<td>用户名：</td>
+						    		<td><input type="text" name="name" class="ipute"></td>
+						    	</tr>
+						    	<tr>
+						    		<td>密码：</td>
+						    		<td><input type="password" name="pwd1" class="ipute"></td>
+						    	</tr>
+						    	<tr>
+						    		<td colspan="2">验证码：
+						    		<input type="text" name="yzm"  class="ipute" style="width: 80px;">
+						    	    <a href="" id="change" title="点击换一张"><img src="captcha.php" id="captcha"/></a></td>
+						    	</tr>
+						    	
+						    </table>
+						    <button class="button1" type="submit">一键登录</button>
+						    <div style="text-align: center;padding-top: 10px;">
+						    	<input type="checkbox" name="aqxy" id="aqxy" /><label for="aqxy">同意UT直聘相关协议</label><br />
+						    	<label>还没账号&nbsp;<a href="#" class="clj_login">到处逛逛</a></label>
+						        
+						    </div>
+						    
+					    </form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box3">
+			<div class="box3_1">服务高校学子，满足海量企业需求</div>
+			<div class="box3_2">
+				<div class="box3_2_1">
+					<div>
+						<img src="img/item-4.png" class="img2" />
+					</div>
+					<div>
+						<h2 class="box3_2_1_1">线上offer</h2>
+					    <div style="color: lightslategray;">线上OFFER一键速递，可对沟通后的求职者发送线上OFFER，便捷高效揽获求职者</div>
+					</div>
+					
+				</div>
+				<div class="box3_2_2">
+					<div>
+						<img src="img/item-2.png" class="img2" />
+					</div>
+					<div>
+					    <h2 class="box3_2_1_1">为高校学子打造</h2>
+					    <div style="color: lightslategray;">丰富的实习岗位，海量对口专业岗位，针对毕业班与非毕业班量身打造的岗位。</div>
+					</div>
+				</div>
+			</div>
+			<div class="box3_3">
+				<div class="box3_3_1">2020@福建工程学院应用技术学院.17物联网.赵焦阳@版权所有.</div>
+			</div>
+		</div>
+		<script>
+		var change=document.getElementById("change");
+		var img=document.getElementById("captcha");
+		var login=document.getElementById("login");
+		var up=document.getElementById("up");
+		var lg_in=document.getElementById("lg_in");
+		var lg_up=document.getElementById("lg_up");
+		change.onclick=function()
+		{
+			img.src="captcha.php?rand="+Math.random();
+			return false;
+		}
+		login.onclick=function()
+		{
+		   lg_in.style.display="block";
+		   lg_up.style.display="none";
+		   login.style.color="darkturquoise";
+		   up.style.color="#000000";
+		   return false;
+		}
+		up.onclick=function()
+		{
+			lg_up.style.display="block";
+			lg_in.style.display="none";
+			up.style.color="darkturquoise";
+		    login.style.color="#000000";
+			return false;
+		}
+		</script>
+	</body>
+	
+</html>
